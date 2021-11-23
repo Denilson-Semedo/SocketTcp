@@ -36,8 +36,10 @@ public class TCPClient {
         
         System.out.println(dados);
         
-        Socket sc= new Socket(ip, porta_server); //estabelece a ligação ao servidor
-        //envia a mensagem ou nome inserido pelo utilizador
+        //estabelecer a ligação ao servidor
+        Socket sc= new Socket(ip, porta_server);
+        
+        //enviar a mensagem ou nome inserido pelo utilizador
         DataOutputStream  canalOut = new DataOutputStream(sc.getOutputStream());
         canalOut.writeUTF(dados);
         
